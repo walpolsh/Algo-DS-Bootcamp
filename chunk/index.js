@@ -18,7 +18,7 @@
 //
 
 function chunk(array, size) {
-  const chunked = [];
+  const chunked = []; //holds our chunks
   let index = 0;
   while (index < array.length) {
     chunked.push(array.slice(index, index + size))
@@ -32,8 +32,8 @@ function chunk(array, size) {
 //   let index = 0;
 //   while (index < array.length) {
 //     chunked.push(array.slice(index, index + size))
-//     //^ push sliced array from index to index + size
-//     //^ slice creates a new array by copying the sliced values
+//     // push sliced array from index to index + size
+//     // slice creates a new array by copying the sliced values
 //     index += size
 //     // index = index + size
 //     // ^
@@ -46,9 +46,8 @@ function chunk(array, size) {
 // function chunk(array, size) {
 //   const chunked = []; //create chunked array
 //   for (var element of array) { //for each element in aray
-//     const last = chunked[chunked.length - 1] //last element in chunked array
-//     !last || last.length === size ? chunked.push([element])
-//     : last.push(element)
+//     const last = chunked[chunked.length - 1] //last element in chunked array, the first time through the loop there is no last element...
+//     !last || last.length === size ? chunked.push([element]) : last.push(element)
 //     // ^ if last element doesnt exist that means there is no array, or if the last array's length === chunk size: push the current element to its own array
 //     //else just push the element on its own (extra)
 //   }
