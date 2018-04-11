@@ -18,22 +18,23 @@
 //
 
 function chunk(array, size) {
-  const chunked = []; //holds our chunks
-  let index = 0;
-  while (index < array.length) {
-    chunked.push(array.slice(index, index + size))
-    index += size
+  const chunked = []; //create empty chunked array
+  let index = 0; //create 'index' start at 0
+  while (index < array.length) { //while index is less than array's length
+    chunked.push(array.slice(index, index + size))//push a slice of length 'size' from 'array' into 'chunked'
+                      //slice(start, end)
+    //if 'size' = 4 and array = 8 then 2 slices will be pushed to 'chunked'
+    index += size // 'add size to index, ^if 'size' = 4 the next chunk will start at index 4
   }
-  return chunked
+  return chunked // [[1,2,3,4][5,6,7,8]]
 }
 
 // function chunk(array, size) {
 //   const chunked = []
 //   let index = 0;
 //   while (index < array.length) {
-//     chunked.push(array.slice(index, index + size))
-//     // push sliced array from index to index + size
-//     // slice creates a new array by copying the sliced values
+//     chunked.push(array.slice(index, index + size)) // push sliced array from index to index + size
+//     // slice creates a new array by copying the sliced values, given a start and optional end index.
 //     index += size
 //     // index = index + size
 //     // ^
@@ -42,7 +43,7 @@ function chunk(array, size) {
 // }
 
 
-//
+
 // function chunk(array, size) {
 //   const chunked = []; //create chunked array
 //   for (var element of array) { //for each element in aray
