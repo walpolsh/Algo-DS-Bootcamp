@@ -9,17 +9,17 @@
 
 // //solution 1: easy to read, but requires good knowledge
 // function capitalize(str) {
-//   //Make an empty array 'words'
+//    //Make an empty array 'words'
 //   let words = []
-//   //split the input string by spaces to get an array  
+//    //split the input string by spaces to get an array  
 //   for (let word of str.split(' ')) {
-//     //for each word in the array
-//     //uppercase the first letter of the word
-//     //join the first letter with the rest of the string (first indexslice starting at index 1)
-//     //push the result into 'words' array
+  //     //for each word in the array
+  //     //uppercase the first letter of the word
+  //     //join the first letter with the rest of the string (first indexslice starting at index 1)
+  //     //push the result into 'words' array
 //     words.push(word[0].toUpperCase() + word.slice(1));
 //   }
-//   //join 'words' into a string and return it
+//     //join 'words' into a string and return it
 //   return words.join(' ');
 // }
 
