@@ -53,15 +53,21 @@ function steps(n, row = 0, stair = '') {
     //otherwise add a space ' '
     stair += ' ';
   }
+
   //recursive call to steps to repeat the process until the row is complete
   // do not return yet, theres nothing to return.
   // you must call steps again with all 3 values because stair has changed, and row needs to be tracked.
   steps(n, row, stair);
 
+  // This could also be expressed with a ternary:
+  // const add = stair.length <= row ? '#' : ' ';
+  // steps(n, row, stair + add)
+
 }
 
 
 //without instruction
+//steps(3)
 function steps(n, row = 0, stair = '') {
 
   if (n === row) {
@@ -73,12 +79,8 @@ function steps(n, row = 0, stair = '') {
     return steps(n, row + 1);
   }
 
-  if (stair.length <= row) {
-    stair += '#';
-  } else {
-    stair += ' ';
-  }
-  steps(n, row, stair);
+  const add = stair.length <= row ? '#' : ' ';
+  steps(n, row, stair + add)
 
 }
 
