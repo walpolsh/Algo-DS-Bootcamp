@@ -8,20 +8,21 @@
 //   capitalize('look, it is working!') --> 'Look, It Is Working!'
 
 // //solution 1: easy to read, but requires good knowledge
-// function capitalize(str) {
-//    //Make an empty array 'words'
-//   let words = []
-//    //split the input string by spaces to get an array  
-//   for (let word of str.split(' ')) {
-  //     //for each word in the array
-  //     //uppercase the first letter of the word
-  //     //join the first letter with the rest of the string (first indexslice starting at index 1)
-  //     //push the result into 'words' array
-//     words.push(word[0].toUpperCase() + word.slice(1));
-//   }
-//     //join 'words' into a string and return it
-//   return words.join(' ');
-// }
+function capitalize(str) {
+   //Make an empty array 'words'
+  let words = []
+   //split the input string by spaces to get an array  
+  for (let word of str.split(' ')) {
+      //for each word in the array
+      //uppercase the first letter of the word
+      //join the first letter with the rest of the string (first indexslice starting at index 1)
+      //push the result into 'words' array
+    words.push(word[0].toUpperCase() + word.slice(1));
+    //.slice makes a new array from a slice starting at index 1 to .length
+  }
+  return words.join(' ');
+  //dont forget to join 'words' by a space and return it
+}
 
 // solution 2: for loop, a litle more brutal to read.
 function capitalize(str) {
