@@ -1,0 +1,63 @@
+Runtime Complexity, Big 'O' Notation
+Constant time = 1
+  - no matter how many elements we're working with, the algorithm/operation/whatever will always take the same amount of time
+  - rarely will such an algorithm exist, its the optimal situation.
+  - the holy grail of solutions
+Logarithmic time = log(n)
+  - you have this if doubling the number of elements you are iterating over doesnt double the amount of work.
+  - always assume that searching operations are log(n)
+Linear Time = n
+  - iterating through all elements in a collection of data. 
+  - if you see a for loop spanning from '0' to 'array.length', you probably have 'n', or linear runtime
+Quasilinear Time = n * log(n)
+  - you have this if doubling the number of elements you are iterating over doesnt double the amount of work.
+  - always assume that any sorting operation is n*log(n)
+Quadratic Time = n ^ 2
+  - every element in a collection has to be compared to every other element. 'the handshake problem'
+Exponential Time = 2 ^ n
+  - if you add a 'single' element to a collection the processing power required doubles.
+
+Identifying Runtime Complexity
+iterating with a simple for loop through a single collection?
+  Probably O(n)
+Iterating through half a colleciton? half a string...
+  still O(n). there are no constants in runtime...
+Iterating through two 'different' collections with separate for loops? iterate two strings
+  O(n + m) ... n represents the 1st string, m represents the 2nd string.
+Two nested for loops iterating over the same collection? nested for loops, big red flag
+  O(n ^ 2)
+  the steps algorithm, and the pyramid algorithm, specifically the iterative solutions
+Two nested for loops iterating over different collections?
+  O(n * m) 
+Sorting?
+  O(n * log(n))
+Searching a sorted array?
+  O(log(n))
+
+
+
+
+
+
+
+
+word.replace(/[^\w]/g, ""/) removes all spaces
+
+.sort can be used on all characters alphabetically...
+
+
+This is how you build a character map:
+
+function buildCharMap(str) {
+  const charMap = {}; //empty charMap object
+
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    //^cleanup logic: for the characters in str replace anything that is not a number, a capital or lowercase with and empty string '' 
+    charMap[char] = charMap[char] + 1 || 1;
+    //assign a key to charMap with the char we're looping, and increment the vale at that character OR make the value equal 1 if it doesn't exist
+  }
+
+  return charMap;
+  //don't forget to return
+
+}

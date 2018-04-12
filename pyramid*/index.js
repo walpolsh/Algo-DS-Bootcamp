@@ -22,7 +22,7 @@ function pyramid(n, row = 0, level = '') {
   const pyramidBase = 2 * n - 1
   const midpoint = Math.floor((pyramidBase) / 2);
   let add;
-
+  
   if (row === n) {
     return
   }
