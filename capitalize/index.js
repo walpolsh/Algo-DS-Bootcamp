@@ -18,7 +18,7 @@ function capitalize(str) {
       //join the first letter with the rest of the string (first indexslice starting at index 1)
       //push the result into 'words' array
     words.push(word[0].toUpperCase() + word.slice(1));
-    //.slice makes a new array from a slice starting at index 1 to .length
+    //.slice makes a new string from a slice starting at index 1 to .length
   }
   return words.join(' ');
   //dont forget to join 'words' by a space and return it
