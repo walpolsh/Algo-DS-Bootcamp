@@ -17,6 +17,8 @@ Quadratic Time = n ^ 2
 Exponential Time = 2 ^ n
   - if you add a 'single' element to a collection the processing power required doubles.
 
+
+
 Identifying Runtime Complexity
 iterating with a simple for loop through a single collection?
   Probably O(n)
@@ -34,7 +36,8 @@ Sorting?
 Searching a sorted array?
   O(log(n))
 
-
+Space complexity is similar to runtime complexity... the math is slightly different.
+  how much memory is wrequire by doubling the problem set?
 
 
 

@@ -8,9 +8,13 @@
 //   vowels('Why?') --> 0
 
 
+// regex solution
 function vowels(str) {
+  //within the [] are the characters to match, g = dont stop at first match, i means case insensitive.
   const matches = str.match(/[aeiou]/gi);
+  // .match() returns an array of the regex  matches
   return matches ? matches.length : 0;
+  //return the number of matches
 }
 
 // //iterative solution

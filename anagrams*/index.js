@@ -65,18 +65,18 @@ function cleanString(str) {
 //   return true
 // }
 //This is a helper function for 'anagrams'
-// function buildCharMap(str) {
-//   const charMap = {}; //empty charMap object
+function buildCharMap(str) {
+  const charMap = {}; //empty charMap object
 
-//   for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-//     //^cleanup logic: for the characters in str replace anything that is not a number, a capital or lowercase with and empty string '' 
-//     charMap[char] = charMap[char] + 1 || 1;
-//     //assign a key to charMap with the char we're looping, and increment the vale at that character OR make the value equal 1 if it doesn't exist
-//   }
+  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
+    //^cleanup logic: for the characters in str replace anything that is not a number, a capital or lowercase with and empty string '' 
+    charMap[char] = charMap[char] + 1 || 1;
+    //assign a key to charMap with the char we're looping, and increment the vale at that character OR make the value equal 1 if it doesn't exist
+  }
 
-//   return charMap;
-//   //don't forget to return
+  return charMap;
+  //don't forget to return
 
-// }
+}
 
 module.exports = anagrams;
