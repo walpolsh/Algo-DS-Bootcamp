@@ -38,7 +38,12 @@
 class Queue {
   //in es6 when u make a class w/ constructor...
   //the constructor will automatically be called when we create a new instance
-  constructor() {
+  constructor() { //a constructor will take arguements
+    //a constructor is a special method for initializing an object inside a class.
+    //there is only one 'constructor' in a class
+    //A constructor can use the super keyword to access the objects of a parent class.
+
+
     this.data = []; //to store our data... any name will do
   }
   

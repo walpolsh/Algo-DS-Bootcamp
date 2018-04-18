@@ -40,27 +40,19 @@ Space complexity is similar to runtime complexity... the math is slightly differ
   how much memory is wrequire by doubling the problem set?
 
 
+Notes on studying:
 
+You're trying to memorize which big-O expression goes with a given algorithmic structure, 
+but you should really just count up the number of operations that the algorithm requires 
+and compare that to the size of the input. An algorithm that loops over its entire input 
+has O(n) performance because it runs the loop n times, not because it has a single loop. 
+Here's a single loop with O(log n) performance:
 
-
-
-word.replace(/[^\w]/g, ""/) removes all spaces
-
-.sort can be used on all characters alphabetically...
-
-
-This is how you build a character map:
-
-function buildCharMap(str) {
-  const charMap = {}; //empty charMap object
-
-  for (let char of str.replace(/[^\w]/g, '').toLowerCase()) {
-    //^cleanup logic: for the characters in str replace anything that is not a number, a capital or lowercase with and empty string '' 
-    charMap[char] = charMap[char] + 1 || 1;
-    //assign a key to charMap with the char we're looping, and increment the vale at that character OR make the value equal 1 if it doesn't exist
-  }
-
-  return charMap;
-  //don't forget to return
-
+for (i = 0; i < log2(input.count); i++) {
+    doSomething(...);
 }
+So, any algorithm where the number of required operations is on the order of the logarithm of the size of the input is O(log n). 
+The important thing that big-O analysis tells you is how the execution time of an algorithm changes relative to the size of the input: 
+if you double the size of the input, does the algorithm take 1 more step (O(log n)), twice as many steps (O(n)), four times as many 
+steps (O(n^2)), etc.
+
