@@ -24,6 +24,24 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+//the tests contain two
+//sourceOne/queueOne contains integers to indicate the order of our queue
+//sourceTwo/queueTwo contains strings which get called after sourceOne
+function weave(sourceOne, sourceTwo) {
+
+  const q = new Queue(); //assign new Queue to variable
+
+  while (sourceOne.peek() || sourceTwo.peek()) { //
+    if (sourceOne.peek()) {
+      q.add(sourceOne.remove());
+    }
+    
+    if (sourceTwo.peek()) {
+      q.add(sourceTwo.remove());
+    }
+  }
+  
+  return q;
+}
 
 module.exports = weave;
