@@ -40,10 +40,12 @@ class Queue {
   peek() {
     while (this.first.peek()) {
       this.second.push(this.first.pop())
+      //when first stack is empty stop pushing to second stack.
     }
 
+    //the last element on top of the second stack
     const record = this.second.peek();
-    
+
     while (this.second.peek()) {
       this.first.push(this.second.pop())
     }
