@@ -23,8 +23,39 @@
 //data and next are interchangable with other words but those are the conventional terms.
 //A linked list is therefore just two separate pieces of data connected together.
 
-class Node {}
+/*
+  const n1 = new Node('There');
+  n1.data // 'Hi'
+  n1.next // null
+  const n2 = new Node('Hi', n1);
+  n2.next // returns n1
+*/
+class Node {
+  //constructor is executed everytime we create a new instance of a class
+  constructor(data, next = null) { //if next is NOT passed in it will default to null
+    //we must assign the arguments being passed in to this Node
+    this.data = data;
+    this.next = next; 
+  }
+}
 
-class LinkedList {}
+class LinkedList {
+  constructor() {
+    this.head = null
+  }
+
+  /*Create a class to represent a linked list. 
+  When created, a linked list should have *no* head node associated with it. 
+  The LinkedList instance will have one property, 'head', which is a reference 
+  to the first node of the linked list. By default 'head' should be 'null'.
+  */
+  insertFirst(data) {
+    // const node = new Node(data, this.head) 
+    // this.head = node; 
+    // Condensed
+    this.head = new Node(data, this.head)
+    //pass in the data, and any pre existing head Node.
+  }
+}
 
 module.exports = { Node, LinkedList };
