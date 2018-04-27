@@ -273,7 +273,7 @@ describe('InsertAt', () => {
   });
 });
 
-describe.skip('ForEach', () => {
+describ.skip('ForEach', () => {
   test('applies a transform to each node', () => {
     const l = new List();
 

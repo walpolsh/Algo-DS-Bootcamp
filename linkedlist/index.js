@@ -193,9 +193,14 @@ class LinkedList {
     const node = new Node(data, previous.next)//create a new node after previous, assign its next as previous's next
     previous.next = node;//insert new node after previous
   }
+  
+  //generator objects have the ability to step though the generator function with the 'next' method
+  forEach (node, index) {
 
+  }
   
-  
+
+
 }
 
 module.exports = { Node, LinkedList };
